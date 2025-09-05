@@ -1,6 +1,6 @@
 
 import express, { Application, Request, Response } from "express"
-import { model, Schema } from "mongoose";
+
 import { bookRoutes } from "./app/controller/book.controller";
 import { userRoutes } from "./app/controller/user.controller";
 import { borrowRoutes } from "./app/controller/borrow.controller";

@@ -29,6 +29,7 @@ bookRoutes.post("/create-book", async(req:Request, res:Response)=>{
         message:"book create  successfully",
         book
     })
+   // eslint-disable-next-line @typescript-eslint/no-explicit-any
    } catch (error:any) {
     res.status(400).json({
         success: false,
@@ -39,7 +40,8 @@ bookRoutes.post("/create-book", async(req:Request, res:Response)=>{
 
 })
 // Service Layer
- const getBooksService = async (query: any) => {
+ // eslint-disable-next-line @typescript-eslint/no-explicit-any
+ const getBooksService = async (query:any) => {
   const sortBy = query.sortBy || "createdAt";
   const sortOrder = query.sort === "asc" ? 1 : -1;
   const limit = Number(query.limit) || 10;
